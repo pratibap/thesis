@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype'); 
+
+	font-family: 'Roboto Black';
+	src: url('../fonts/roboto/Roboto-Black.ttf')  format('truetype'); 
+
+	font-family: 'Roboto Bold';
+	src: url('../fonts/roboto/Roboto-Bold.ttf')  format('truetype'); 
+
+	font-family: 'RobotoCondensed Bold';
+	src: url('../fonts/roboto/RobotoCondensed-Bold.ttf')  format('truetype'); 
+}
+	
+body {    
+	margin: 0;
+	padding: 1% 7%;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	background: url('../img/background.png') no-repeat center center fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+body:before {
+	content: "";
+    height: 100%;
+    width: 100%;  
+    opacity: 0.2;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+	background: rgba(27, 27, 27, .5);\
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-grey {
+	color: #9B9B9B;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+ul.inline li {
+	list-style-type: none;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+}
+
+header, main, footer, .inline {
+	width: 100%;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav {
+	width: 50%;
+	font-size: 20px;
+}
+
+header nav ul {
+	width: 100%;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+main {
+	flex: 1;
+	align-items: flex-start;
+}
+
+main > * {
+	width: 50%;
+	padding: 1% 5%;
+}
+
+main .left {
+	align-self: center;
+}
+
+main .left h1 {
+	font-family: 'RobotoCondensed Bold', sans-serif;
+	font-size: 72px;
+	line-height: 78px;
+	margin: 0;
+}
+
+main .left h1 + p {
+	opacity: .8;
+	font-size: 22px;
+    line-height: 32px;
+    margin-top: 1em;
+}
+
+main .right h6 {
+	font-family: 'Roboto Black', sans-serif;
+	font-size: 1em;
+}
+
+main .right form {
+	border: 2px solid #fff;
+	border-radius: 2.5%;
+}
+
+main .right form > * {
+	display: block;
+}
+
+main .right form input {
+	width: 100%;
+	border: none;
+	font-size: 18px;
+}
+
+main .right form input:not([name='name']) {
+	border-top: 1px solid #fff;}
+
+main .right form input:not([type='submit']) {
+	background: transparent;
+	padding: .75em 0;
+}
+
+main .right form input[type='submit'] {
+	background-color: #2C99ED;
+	color: #fff;
+	padding: 1em 0;
+}
+
+main .right form + p {
+	margin: 2em 0 .75em 0;
+}
+
+main .right form + p, main .right form + p + a, footer {
+	width: 100%;
+	font-size: 14px
+}
+
+footer > nav {
+	text-transform: uppercase;
+}
